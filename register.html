@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Podkova&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ed0c74a592.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#043F2E",
+              secondary: "#F8F5F5",
+              tertiary: "#FF7A00",
+              search: "#E2DEDA",
+              body: "#FFFBF7",
+              buttonClr: "#908f8d4d",
+              textClr: "#545454",
+            },
+            fontFamily: {
+              Garamond: ["EB Garamond", "serif"],
+              Roboto: ["Roboto", "sans-serif"],
+              Podkova: ["Podkova", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+    <script src="script/main.js"></script>
+    <title>Sign in [Provide the information</title>
+  </head>
+  <body class="bg-body">
+    <header class="bg-primary md:h-[75px]">
+      <nav
+        class="flex flex-col md:flex-row justify-between items-center md:h-[75px] gap-4 md:gap-0 py-3 max-w-7xl w-full mx-auto"
+      >
+        <div class="flex items-center gap-3">
+          <img src="images/icon.png" alt="" class="w-12" />
+          <h2 class="font-Garamond text-[28px] text-white">Shahazzo</h2>
+        </div>
+        <div class="font-Roboto text-white">
+          <ul class="flex gap-10">
+            <li class="nav-element">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="nav-element">
+              <a href="campaign.html">Campaign</a>
+            </li>
+            <li class="nav-element">
+              <a href="donate.html">Donate</a>
+            </li>
+          </ul>
+        </div>
+        <div class="font-Garamond flex items-center gap-4">
+          <button class="bg-tertiary w-20 h-8 rounded-[4px] font-extrabold">
+            বাংলা</button
+          ><a href="signin.html"
+            ><button
+              class="bg-white text-black w-[85px] h-[35px] rounded-[6px] text-xl"
+            >
+              Sign in
+            </button></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="box-border flex justify-center items-center mt-[100px]">
+        <div
+          class="font-Garamond p-4 mx-4 md:mx-0 relative rounded-lg border-2 border-primary"
+        >
+          <h1 class="text-primary text-[30px] mb-5">Create an account</h1>
+
+          <form action="">
+            <label for="name" class="text-xl mb-1 block">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Provide your valid name"
+              class="w-[300px] bg-body h-10 pl-4 border-2 border-primary rounded-lg font-Podkova text-lg"
+            />
+
+            <label for="moborem1" class="text-xl mt-3 mb-1 block"
+              >Mobile or Email</label
+            >
+            <input
+              id="moborem1"
+              name="moborem1"
+              type="text"
+              placeholder="Mobile Number or Email"
+              class="w-[300px] bg-body h-10 pl-4 border-2 border-primary rounded-lg font-Podkova text-lg"
+            />
+
+            <label for="pass1" class="text-xl mt-3 mb-1 block">Password</label>
+            <input
+              id="pass1"
+              name="pass1"
+              type="password"
+              placeholder="Set your Password"
+              class="w-[300px] bg-body h-10 pl-4 border-2 border-primary rounded-lg font-Podkova text-lg"
+            />
+
+            <button
+              type="button"
+              class="w-[300px] h-10 bg-primary mt-5 text-white text-lg rounded-lg block"
+            >
+              Submit
+            </button>
+          </form>
+          <p class="mt-5 text-center">
+            <a href="signin.html" class="text-tertiary">Already registered?</a>
+          </p>
+          <div class="absolute top-[-80px] left-[110px]">
+            <img src="images/reg.png" alt="" class="w-28" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

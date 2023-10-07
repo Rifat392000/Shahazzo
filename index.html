@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ed0c74a592.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#043F2E",
+              secondary: "#F8F5F5",
+              tertiary: "#FF7A00",
+              search: "#E2DEDA",
+              body: "#FFFBF7",
+              buttonClr: "#908f8d4d",
+              textClr: "#545454",
+            },
+            fontFamily: {
+              Garamond: ["EB Garamond", "serif"],
+              Roboto: ["Roboto", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+    <script src="script/main.js"></script>
+    <title>
+      Shahazzo [In Islam, generosity is greatly loved by Allah SWT and those who
+      give to help others shall receive infinite reward from their Lord.]
+    </title>
+  </head>
+  <body>
+    <header class="bg-primary md:h-[75px]">
+      <nav
+        class="flex flex-col md:flex-row justify-between items-center md:h-[75px] gap-4 md:gap-0 py-4 max-w-7xl w-full mx-auto"
+      >
+        <div class="flex items-center gap-3">
+          <img src="images/icon.png" alt="" class="w-12" />
+          <h2 class="font-Garamond text-[28px] text-white">Shahazzo</h2>
+        </div>
+        <div class="font-Roboto text-white">
+          <ul class="flex gap-10">
+            <li class="nav-element">
+              <a href="index.html">Home</a>
+              <hr />
+            </li>
+            <li class="nav-element"><a href="campaign.html">Campaign</a></li>
+            <li class="nav-element"><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+        <div class="font-Garamond flex items-center gap-4">
+          <button class="bg-tertiary w-20 h-8 rounded-[4px] font-extrabold">
+            বাংলা</button
+          ><a href="signin.html"
+            ><button
+              class="bg-white text-black w-[85px] h-[35px] rounded-[6px] text-xl"
+            >
+              Sign in
+            </button></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main class="bg-body">
+      <section class="max-w-7xl w-full mx-auto pt-20 md:pt-28">
+        <div class="custom-cls h-[230px] md:h-[500px]">
+          <div class="container">
+            <input
+              type="radio"
+              name="slider"
+              id="item-1"
+              class="input-cls"
+              checked
+            />
+            <input type="radio" name="slider" id="item-2" class="input-cls" />
+            <input type="radio" name="slider" id="item-3" class="input-cls" />
+            <div class="cards">
+              <label class="card" for="item-1" id="song-1">
+                <img
+                  src="images/donation1.jpg"
+                  alt="song"
+                  class="image-cls bg-center"
+                />
+              </label>
+              <label class="card" for="item-2" id="song-2">
+                <img
+                  src="images/donation2.jpg"
+                  alt="song"
+                  class="image-cls bg-center"
+                />
+              </label>
+              <label class="card" for="item-3" id="song-3">
+                <img
+                  src="images/donation3.jpg"
+                  alt="song"
+                  class="image-cls bg-center"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="max-w-7xl w-full mx-auto pt-16">
+        <form action="" class="flex justify-center mx-2 md:mx-0">
+          <input
+            type="text"
+            placeholder="search here..."
+            name=""
+            class="bg-search w-[338px] h-11 font-medium text-lg rounded-l-3xl pl-6 block border-l-2 border-y-2 border-primary"
+          />
+          <button
+            type="submit"
+            class="w-[85px] h-11 bg-primary text-white rounded-r-3xl font-Garamond text-lg border-r-2 border-y-2 border-primary"
+          >
+            Search
+          </button>
+        </form>
+        <div class="text-center mt-20 font-Garamond text-textClr text-6xl">
+          <h1>
+            Great futures are built <br />
+            With a small Charity
+          </h1>
+        </div>
+        <div class="flex justify-center">
+          <a href="">
+            <button
+              class="mt-12 bg-primary text-white font-Garamond text-2xl w-36 h-14 rounded-md grow-btn"
+            >
+              Donate
+            </button></a
+          >
+        </div>
+      </section>
+      <section class="max-w-7xl w-full mx-auto py-28">
+        <h2 class="text-center font-Garamond text-textClr text-5xl">
+          Total Collection Analytics
+        </h2>
+        <div class="grid md:grid-cols-3 gap-y-8 md:gap-8 mx-4 md:mx-36 mt-12">
+          <div
+            class="w-full bg-secondary flex flex-col items-center gap-6 py-16 grow"
+          >
+            <img src="images/image1.png" alt="" class="w-28" />
+            <div
+              class="text-center text-textClr font-semibold font-Roboto text-xl"
+            >
+              <h3>1000+</h3>
+              <h3>TK(BDT)</h3>
+            </div>
+          </div>
+          <div
+            class="w-full bg-secondary flex flex-col items-center gap-6 py-16 grow"
+          >
+            <img src="images/image2.png" alt="" class="w-28" />
+            <div
+              class="text-center text-textClr font-semibold font-Roboto text-xl"
+            >
+              <h3>500+</h3>
+              <h3>Blood Bags</h3>
+            </div>
+          </div>
+          <div
+            class="w-full bg-secondary flex flex-col items-center gap-6 py-16 grow"
+          >
+            <img src="images/image3.png" alt="" class="w-28" />
+            <div
+              class="text-center text-textClr font-semibold font-Roboto text-xl"
+            >
+              <h3>100+</h3>
+              <h3>Bag Books</h3>
+            </div>
+          </div>
+          <div
+            class="w-full bg-secondary flex flex-col items-center gap-6 py-16 grow"
+          >
+            <img src="images/image4.png" alt="" class="w-28" />
+            <div
+              class="text-center text-textClr font-semibold font-Roboto text-xl"
+            >
+              <h3>2000+</h3>
+              <h3>Clothes</h3>
+            </div>
+          </div>
+          <div
+            class="w-full bg-secondary flex flex-col items-center gap-6 py-16 grow"
+          >
+            <img src="images/image5.png" alt="" class="w-28" />
+            <div
+              class="text-center text-textClr font-semibold font-Roboto text-xl"
+            >
+              <h3>500+</h3>
+              <h3>Pack Medicines</h3>
+            </div>
+          </div>
+          <div
+            class="w-full bg-secondary flex flex-col items-center gap-6 py-16 grow"
+          >
+            <img src="images/image6.png" alt="" class="w-28" />
+            <div
+              class="text-center text-textClr font-semibold font-Roboto text-xl"
+            >
+              <h3>700+</h3>
+              <h3>Boxes Foods</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-primary py-6">
+      <section class="max-w-7xl w-full mx-auto">
+        <div class="mx-4">
+          <img src="images/icon.png" alt="" class="w-12" />
+          <div class="mt-4 text-white grid md:grid-cols-4">
+            <div>
+              <h3 class="font-Garamond text-xl">Quick Links</h3>
+              <ul class="font-Roboto font-thin text-sm text-yellow-50">
+                <li class="my-3"><a href="index.html">Home</a></li>
+                <li class="mb-3"><a href="campaign.html">Campaign</a></li>
+                <li class="mb-3"><a href="donate.html">Donate</a></li>
+                <li class="mb-3"><a href="">Pickup</a></li>
+              </ul>
+            </div>
+            <div class="md:mr-36 md:-ml-28">
+              <h3 class="font-Garamond text-xl">About Us</h3>
+              <p
+                class="text-justify font-Roboto font-thin text-sm mt-3 mb-3 md:mb-0"
+              >
+                Shahazzo.com is a non-profit donation website that aims to
+                empower individuals and communities through the power of giving.
+                Our mission is to make it easy for people to donate to causes
+                that they care about, and to create a positive impact in the
+                world.
+              </p>
+            </div>
+            <div class="md:-ml-14">
+              <h3 class="font-Garamond text-xl">Contact Now</h3>
+              <p class="font-Roboto font-thin text-sm mt-3 md:mt-6 mb-3">
+                Jahurul Islam City Gate, <br />
+                A/2 Jahurul Islam Ave, Dhaka 1212
+              </p>
+              <p class="font-Roboto font-thin text-sm text-yellow-50 mb-4">
+                <a href="mailto:shahazzo392000@gmail.com"
+                  >shahazzo392000@gmail.com</a
+                >
+              </p>
+              <div class="flex gap-3 mb-6 md:mb-0">
+                <a href=""
+                  ><img src="images/facebook.png" alt="" class="w-7"
+                /></a>
+                <a href=""><img src="images/gmail.png" alt="" class="w-7" /></a>
+                <a href=""
+                  ><img src="images/instagram.png" alt="" class="w-7"
+                /></a>
+                <a href=""
+                  ><img src="images/twitter.png" alt="" class="w-7"
+                /></a>
+              </div>
+            </div>
+            <div class="md:-ml-14">
+              <h3 class="font-Garamond text-xl">Subscribe</h3>
+              <p
+                class="font-Roboto font-thin text-sm mt-3 md:mt-6 mb-3 md:mb-5"
+              >
+                Subscribe for our latest & Articles. <br />
+                We Won't Give You Spam Mails
+              </p>
+              <form action="" class="flex">
+                <input
+                  type="text"
+                  placeholder="email address"
+                  name=""
+                  class="bg-white w-48 h-11 text-black text-lg rounded-l-md pl-3"
+                />
+                <button
+                  type="submit"
+                  class="w-12 h-11 bg-tertiary rounded-r-md flex justify-center items-center"
+                >
+                  <img src="images/paper-plane.png" alt="" class="w-6" />
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-6 -mb-2 mx-4" />
+        <h4 class="text-center font-Roboto font-thin text-sm mt-6 text-white">
+          Copyright@ 2023 Shahazzo | Developed and maintained by
+          <a href="projectTeam.html" target="_blank" class="text-yellow-50"
+            >CSE347 S4 Group 3</a
+          >
+          (Instructor: Nishat Tasnim Niloy)
+        </h4>
+      </section>
+    </footer>
+  </body>
+</html>

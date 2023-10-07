@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Podkova&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/ed0c74a592.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#043F2E",
+              secondary: "#F8F5F5",
+              tertiary: "#FF7A00",
+              search: "#E2DEDA",
+              body: "#FFFBF7",
+              buttonClr: "#908f8d4d",
+              textClr: "#545454",
+            },
+            fontFamily: {
+              Garamond: ["EB Garamond", "serif"],
+              Roboto: ["Roboto", "sans-serif"],
+              Podkova: ["Podkova", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    </style>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+    <script src="script/money.js"></script>
+    <title>Donate Money</title>
+  </head>
+  <body class="bg-body box-border">
+    <header class="bg-primary md:h-[75px]">
+      <nav
+        class="flex flex-col md:flex-row justify-between items-center md:h-[75px] gap-4 md:gap-0 py-3 max-w-7xl w-full mx-auto"
+      >
+        <div class="flex items-center gap-3">
+          <img src="images/icon.png" alt="" class="w-12" />
+          <h2 class="font-Garamond text-[28px] text-white">Shahazzo</h2>
+        </div>
+        <div class="font-Roboto text-white">
+          <ul class="flex gap-10">
+            <li class="nav-element">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="nav-element">
+              <a href="campaign.html">Campaign</a>
+            </li>
+            <li class="nav-element">
+              <a href="donate.html">Donate</a>
+              <hr />
+            </li>
+          </ul>
+        </div>
+        <div class="font-Garamond flex items-center gap-4">
+          <button class="bg-tertiary w-20 h-8 rounded-[4px] font-extrabold">
+            বাংলা
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="max-w-7xl w-full mx-auto pt-12 md:pt-24 md:px-36 px-4">
+        <div
+          class="h-10 rounded-lg border-2 border-primary w-48 flex justify-center items-center mb-10"
+        >
+          <div>
+            <input
+              type="radio"
+              id="e2"
+              checked="checked"
+              name="r1"
+              onchange="show(this.value)"
+              class="transition-all"
+            /><label for="e2"
+              >&nbsp;<span class="font-Podkova font-semibold">Offline</span
+              >&nbsp;&nbsp;&nbsp;</label
+            >
+            <input
+              type="radio"
+              name="r1"
+              id="e1"
+              onchange="show2()"
+              class="transition-all"
+            /><label for="e1"
+              >&nbsp;<span class="font-Podkova font-semibold"
+                >Online</span
+              ></label
+            >
+          </div>
+        </div>
+
+        <div id="sh1" class="md:mt-12">
+          <div
+            class="md:w-[450px] rounded-lg border-2 border-primary md:h-72 relative"
+          >
+            <p
+              class="mt-6 text-center text-red-600 font-Garamond font-extrabold text-xl"
+            >
+              !! Caution Must be donate 500 Tk or More !!
+            </p>
+            <div class="pl-4 pt-6">
+              <form action="">
+                <label
+                  for="Amount"
+                  class="font-Garamond text-xl block md:inline"
+                  >Amount in TK</label
+                >
+                <input
+                  type="number"
+                  id="Amount"
+                  name="Amount"
+                  placeholder="number in digit"
+                  class="bg-body border-2 border-primary rounded-md font-Podkova text-lg w-60 h-10 md:ml-7 pl-4 mb-4 md:mb-0"
+                />
+                <br class="hidden md:block" />
+                <br class="hidden md:block" />
+                <label
+                  for="dateandtime"
+                  class="font-Garamond text-xl block md:inline"
+                  >Date and Time</label
+                >
+                <input
+                  type="datetime-local"
+                  id="dateandtime"
+                  name="dateandtime"
+                  class="bg-body border-2 border-primary rounded-md font-Podkova text-lg w-60 h-10 md:ml-7 pl-4"
+                />
+                <div class="flex justify-center md:mt-5 mb-3">
+                  <button
+                    type="submit"
+                    class="w-[80px] h-10 bg-primary mt-5 text-white text-xl rounded font-Garamond"
+                  >
+                    Go
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div
+              class="absolute -top-4 left-2 w-20 h-8 bg-body flex justify-center items-center rounded-md border-2 border-primary"
+            >
+              <span class="font-Podkova font-extrabold">Offline</span>
+            </div>
+          </div>
+        </div>
+        <div id="sh2" style="display: none" class="md:mt-20">
+          <div
+            class="md:w-[500px] rounded-lg border-2 border-primary relative mb-8 md:mb-0"
+          >
+            <div class="mt-10 md:ml-10 mx-2 md:mx-0">
+              <div
+                class="h-10 rounded-lg border-2 border-primary w-48 flex justify-center items-center mb-10"
+              >
+                <input
+                  type="radio"
+                  id="bkash"
+                  checked="checked"
+                  name="balance"
+                  style="accent-color: #e8025a"
+                  onchange="money(this.value)"
+                  class="transition-all"
+                /><label for="bkash"
+                  >&nbsp;<span class="font-Podkova font-semibold">Bkash</span
+                  >&nbsp;&nbsp;&nbsp;</label
+                >
+                <input
+                  type="radio"
+                  name="balance"
+                  id="nagad"
+                  style="accent-color: #ec2029"
+                  class="transition-all"
+                  onchange="money2()"
+                /><label for="nagad"
+                  >&nbsp;<span class="font-Podkova font-semibold"
+                    >Nagad</span
+                  ></label
+                >
+              </div>
+              <div id="mo1" class="md:relative">
+                <img src="images/bkash_logo.png" alt="" class="w-56" />
+                <div class="md:absolute md:top-0 md:right-14 w-36">
+                  <div class="flex justify-center items-center flex-col">
+                    <img src="images/bkash.png" alt="" />
+                    <p class="font-Podkova font-extrabold pt-3 text-center">
+                      01707972640 <br />Scan me
+                    </p>
+                  </div>
+                </div>
+                <form action="" class="md:mt-20 mt-5">
+                  <label for="trn" class="font-Garamond text-xl block md:inline"
+                    >Transaction Id</label
+                  >
+                  <input
+                    type="text"
+                    id="trn"
+                    name="trn"
+                    placeholder="write "
+                    class="bg-body border-2 border-primary rounded-md font-Podkova text-lg w-60 h-10 md:ml-7 pl-4 mb-4 md:mb-0"
+                  />
+                  <div class="flex justify-center md:mt-5 mb-4">
+                    <button
+                      type="submit"
+                      class="w-[80px] h-10 bg-primary text-white text-xl rounded font-Garamond"
+                    >
+                      Go
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <div id="mo2" style="display: none" class="md:relative">
+                <img src="images/nagad_logo.png" alt="" class="w-44" />
+                <div class="md:absolute md:top-0 md:right-14 w-36">
+                  <div class="flex justify-center items-center flex-col">
+                    <img src="images/nagad.png" alt="" />
+                    <p class="font-Podkova font-extrabold pt-3 text-center">
+                      01707972640 <br />Scan me
+                    </p>
+                  </div>
+                </div>
+                <form action="" class="md:mt-12 mt-5">
+                  <label
+                    for="trn1"
+                    class="font-Garamond text-xl block md:inline"
+                    >Transaction Id</label
+                  >
+                  <input
+                    type="text"
+                    id="trn1"
+                    name="trn1"
+                    placeholder="write "
+                    class="bg-body border-2 border-primary rounded-md font-Podkova text-lg w-60 h-10 md:ml-7 pl-4 mb-4 md:mb-0"
+                  />
+                  <div class="flex justify-center md:mt-5 mb-4">
+                    <button
+                      type="submit"
+                      class="w-[80px] h-10 bg-primary text-white text-xl rounded font-Garamond"
+                    >
+                      Go
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div
+              class="absolute -top-4 left-2 w-20 h-8 bg-body flex justify-center items-center rounded-md border-2 border-primary"
+            >
+              <span class="font-Podkova font-extrabold">Online</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

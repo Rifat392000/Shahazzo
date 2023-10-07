@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box !important;
+}
+
+.custom-cls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .4s ease-in;
+ 
+  
+  &.blue {
+    background-color: #428aa6;
+  }
+}
+
+.input-cls[type=radio] {
+  display: none;
+}
+
+.card {
+  position: absolute;
+  width: 60% ;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.image-cls {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+  transform: translatex(-40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+  transform: translatex(40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+  
+ .image-cls {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+}
+
+// Transition
+.nav-element:hover{
+  color: #FF7A00;
+}
+.grow:hover ,.nav-element:hover,.grow-camp:hover
+{
+ -webkit-transform: scale(1.03);
+ -ms-transform: scale(1.03);
+ transform: scale(1.03);
+}
+.grow:hover {
+  background-color: #a0e0f9;
+}
+.grow-btn:hover{
+  -webkit-transform: scale(1.07);
+ -ms-transform: scale(1.07);
+ transform: scale(1.07);
+}
+@-webkit-keyframes swing
+{
+ 15%
+ {
+ -webkit-transform: translateX(5px);
+ transform: translateX(5px);
+ }
+ 30%
+ {
+ -webkit-transform: translateX(-5px);
+ transform: translateX(-5px);
+ } 
+ 50%
+ {
+ -webkit-transform: translateX(3px);
+ transform: translateX(3px);
+ }
+ 65%
+ {
+ -webkit-transform: translateX(-3px);
+ transform: translateX(-3px);
+ }
+ 80%
+ {
+ -webkit-transform: translateX(2px);
+ transform: translateX(2px);
+ }
+ 100%
+ {
+ -webkit-transform: translateX(0);
+ transform: translateX(0);
+ }
+}
+@keyframes swing
+{
+ 15%
+ {
+ -webkit-transform: translateX(5px);
+ transform: translateX(5px);
+ }
+ 30%
+ {
+ -webkit-transform: translateX(-5px);
+ transform: translateX(-5px);
+ }
+ 50%
+ {
+ -webkit-transform: translateX(3px);
+ transform: translateX(3px);
+ }
+ 65%
+ {
+ -webkit-transform: translateX(-3px);
+ transform: translateX(-3px);
+ }
+ 80%
+ {
+ -webkit-transform: translateX(2px);
+ transform: translateX(2px);
+ }
+ 100%
+ {
+ -webkit-transform: translateX(0);
+ transform: translateX(0);
+ }
+}
+.swing:hover
+{
+ -webkit-animation: swing 1s ease;
+ animation: swing 1s ease;
+ -webkit-animation-iteration-count: 1;
+ animation-iteration-count: 1;
+}
+
+.fade:hover
+{
+ opacity:0.3;
+}
+//Sign in
+.gradient-border {
+  --borderWidth: 3px;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+
+
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+input[type='radio'] {
+  accent-color: #043F2E;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(24, 14, 14, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  margin: auto;
+  border: 1px solid #888;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
